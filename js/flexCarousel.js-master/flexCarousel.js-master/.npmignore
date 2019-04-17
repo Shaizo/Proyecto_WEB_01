@@ -1,0 +1,7 @@
+build
+docs
+test
+.gitattributes
+.gitignore
+package-lock.json
+.idea
