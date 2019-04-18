@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+    
+    
 </head>
 
 <body>
+	<div class="cambiador-temas">
+		<p class="bg-primary" id="azul" onclick="cambiarTema('azul')"><i class="fa fa-picture-o"></i></p>
+		<p class="bg-success" id="verde" onclick="cambiarTema('verde')"><i class="fa fa-picture-o"></i></p>
+		<p class="bg-danger" id="rojo" onclick="cambiarTema('rojo')"><i class="fa fa-picture-o"></i></p>
+	</div>
     <div class="container espacio-natural-fuera espacio-natural-dentro bg-white">
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-light no-padding">
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                            <li class="nav-item">
-                                <h1 class="bk-verde text-white bold-600 p-3 text-center">PRACTICANDO JS</h1>
-                            </li>
-                        </ul>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <h1 class="bk-verde text-white bold-600 p-3 text-center">PRACTICANDO JS</h1>
+                        </li>
+                    </ul>
                     <form class="form-inline my-2 my-lg-0 align-top">
                         <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-verde my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
@@ -84,37 +89,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-8">
-                <div class="col-sm-12">
-                    <nav class="navbar navbar-light no-padding my-2">
-                        <div>
-                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 jus">
-                                <li class="nav-item">
-                                    <h2 class="bold-600">Lorem Ipsum</h2>
-                                    <footer class="blockquote-footer">Publicado el Miercols 17 de Abril de 2019</footer>
-                                </li>
-                            </ul>
-                        </div>
-                        <h6 class="bk-verde text-white p-2 text-center mt-2">92 comentarios</h6>
-                    </nav>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius, nulla ut vulputate sodales, nisl nulla semper est, sit amet tempor nisi nunc at nulla. Nunc aliquet, elit vitae varius tempor, nibh lorem ultricies purus, et iaculis nisi ligula eu tellus. Nullam non dolor non elit molestie pharetra nec vel sapien. Praesent ligula nisi, tempor semper suscipit vel, faucibus vitae eros. Etiam eget ultrices justo. Nunc non nibh ut lorem venenatis rhoncus nec consequat est. Suspendisse auctor magna in tellus sagittis, nec sollicitudin enim ultricies. Quisque libero elit, gravida sed lorem sit amet, rutrum porta quam. Aliquam dignissim facilisis rhoncus. Curabitur rutrum eros vel ultrices ultricies. Duis faucibus pretium rutrum. Donec eros eros, feugiat eu maximus id, pulvinar vestibulum nunc. Phasellus eleifend, neque volutpat feugiat ultrices, purus quam euismod leo, porttitor viverra dolor mi sed orci.<br /><br />Ut quis risus pharetra, aliquam metus quis, egestas velit. Morbi libero metus, ultrices a dolor vel, cursus mattis turpis. Quisque dictum tellus id lorem vestibulum sagittis. Maecenas lacinia placerat bibendum. Nulla imperdiet velit diam, sed tempor orci convallis eu. Ut feugiat massa sit amet magna ultrices, quis facilisis sem vehicula. Aliquam venenatis augue in risus feugiat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque et malesuada elit. Mauris nec facilisis neque.<br /><br />Cras malesuada aliquet convallis. Maecenas bibendum, ligula sed aliquam suscipit, nulla tellus consectetur ex, a dictum tellus velit sit amet sem. Duis id est finibus, sodales purus quis, tempor erat. Mauris id nibh ut risus viverra hendrerit sit amet eget tellus. Cras nulla ipsum, congue in leo interdum, auctor mollis enim. Phasellus libero dui, finibus vestibulum mi quis, iaculis mattis mi. Nunc sollicitudin lobortis porttitor. Sed lacinia nibh diam. Pellentesque ullamcorper quam a venenatis malesuada.</p>
-                    <hr />
-                </div>
-                <div class="col-sm-12 ">
-                    <nav class="navbar navbar-light no-padding my-2">
-                        <div>
-                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                <li class="nav-item">
-                                    <h2 class="bold-600">Lorem Ipsum</h2>
-                                    <footer class="blockquote-footer">Publicado el Miercols 17 de Abril de 2019</footer>
-                                </li>
-                            </ul>
-                        </div>
-                        <h6 class="bk-verde text-white p-2 text-center mt-2">92 comentarios</h6>
-                    </nav>
-                    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius, nulla ut vulputate sodales, nisl nulla semper est, sit amet tempor nisi nunc at nulla. Nunc aliquet, elit vitae varius tempor, nibh lorem ultricies purus, et iaculis nisi ligula eu tellus. Nullam non dolor non elit molestie pharetra nec vel sapien. Praesent ligula nisi, tempor semper suscipit vel, faucibus vitae eros. Etiam eget ultrices justo. Nunc non nibh ut lorem venenatis rhoncus nec consequat est. Suspendisse auctor magna in tellus sagittis, nec sollicitudin enim ultricies. Quisque libero elit, gravida sed lorem sit amet, rutrum porta quam. Aliquam dignissim facilisis rhoncus. Curabitur rutrum eros vel ultrices ultricies. Duis faucibus pretium rutrum. Donec eros eros, feugiat eu maximus id, pulvinar vestibulum nunc. Phasellus eleifend, neque volutpat feugiat ultrices, purus quam euismod leo, porttitor viverra dolor mi sed orci.<br /><br />Ut quis risus pharetra, aliquam metus quis, egestas velit. Morbi libero metus, ultrices a dolor vel, cursus mattis turpis. Quisque dictum tellus id lorem vestibulum sagittis. Maecenas lacinia placerat bibendum. Nulla imperdiet velit diam, sed tempor orci convallis eu. Ut feugiat massa sit amet magna ultrices, quis facilisis sem vehicula. Aliquam venenatis augue in risus feugiat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque et malesuada elit. Mauris nec facilisis neque.<br /><br />Cras malesuada aliquet convallis. Maecenas bibendum, ligula sed aliquam suscipit, nulla tellus consectetur ex, a dictum tellus velit sit amet sem. Duis id est finibus, sodales purus quis, tempor erat. Mauris id nibh ut risus viverra hendrerit sit amet eget tellus. Cras nulla ipsum, congue in leo interdum, auctor mollis enim. Phasellus libero dui, finibus vestibulum mi quis, iaculis mattis mi. Nunc sollicitudin lobortis porttitor. Sed lacinia nibh diam. Pellentesque ullamcorper quam a venenatis malesuada.</p>
-                </div>
-            </div>
+            <div class="col-sm-8" id="contenedor-articulos">
+               <!-- Carga de articulos -->
+            </div> 
             <div class="col-sm-4">
                 <div class="row p-3">
                     <div class="col-md-4 repetir">&nbsp;</div>
@@ -128,14 +105,47 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <p class="text-justify pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius, nulla ut vulputate sodales, nisl nulla semper est, sit amet tempor nisi nunc at nulla. Nunc aliquet, elit vitae varius tempor, nibh lorem ultricies purus, et iaculis nisi ligula eu tellus. Nullam non dolor non elit molestie pharetra nec vel sapien. Praesent ligula nisi, tempor semper suscipit vel, faucibus vitae eros. Etiam eget ultrices justo. Nunc non nibh ut lorem venenatis rhoncus nec consequat est. Suspendisse auctor magna in tellus sagittis, nec sollicitudin enim ultricies. Quisque libero elit, gravida sed lorem sit amet, rutrum porta quam. Aliquam dignissim facilisis rhoncus. Curabitur rutrum eros vel ultrices ultricies. Duis faucibus pretium rutrum. Donec eros eros, feugiat eu maximus id, pulvinar vestibulum nunc. Phasellus eleifend, neque volutpat feugiat ultrices, purus quam euismod leo, porttitor viverra dolor mi sed orci.<br /><br />Ut quis risus pharetra, aliquam metus quis, egestas velit. Morbi libero metus, ultrices a dolor vel, cursus mattis turpis. Quisque dictum tellus id lorem vestibulum sagittis. Maecenas lacinia placerat bibendum. Nulla imperdiet velit diam, sed tempor orci convallis eu. Ut feugiat massa sit amet magna ultrices, quis facilisis sem vehicula. Aliquam venenatis augue in risus feugiat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque et malesuada elit. Mauris nec facilisis neque.<br /><br />Cras malesuada aliquet convallis. Maecenas bibendum, ligula sed aliquam suscipit, nulla tellus consectetur ex, a dictum tellus velit sit amet sem. Duis id est finibus, sodales purus quis, tempor erat. Mauris id nibh ut risus viverra hendrerit sit amet eget tellus. Cras nulla ipsum, congue in leo interdum, auctor mollis enim. Phasellus libero dui, finibus vestibulum mi quis, iaculis mattis mi. Nunc sollicitudin lobortis porttitor. Sed lacinia nibh diam. Pellentesque ullamcorper quam a venenatis malesuada.</p>
+                        <p class="text-justify pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus varius, nulla ut vulputate sodales, nisl nulla semper est, sit amet tempor nisi nunc at nulla. Nunc aliquet, elit vitae varius tempor, nibh lorem ultricies purus, et iaculis nisi ligula eu tellus.</p>
+                    </div>
+                </div>
+                <div class="row p-3">
+                    <div class="col-md-4 repetir">&nbsp;</div>
+                    <div class="col-md-4 text-center p-0">Identificate</div>
+                    <div class="col-md-4 repetir">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-0 mt-2">Nombre</p>
+                        <input class="form-control" type="text">
+                        <p class="mb-0 mt-2">Correo</p>
+                        <input class="form-control" type="text">
+                        <p class="mb-0 mt-2">Contraseña</p>
+                        <input class="form-control" type="password">
+                        <button class="btn btn-verde my-2" type="submit">Login</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container espacio-natural-fuera-negativo espacio-natural-dentro bg-secondary">
+        <div class="row">
+            <div class="col">
+                <!-- Footer -->
+                <footer class="page-footer font-small">
+                    <!-- Copyright -->
+                    <h4 class="footer-copyright text-center py-2 text-white font-weight-bold">Master en JS de Aitor Ledesma</h4>
+                    <!-- Copyright -->
+
+                </footer>
+                <!-- Footer -->
+            </div>
+        </div>
+    </div>
+    <div id="subir"><p href="#" >IR ARRIBA</p></div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
