@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    
+    if(window.location.href.indexOf('index') > -1){
+    //Añadir articulos 
     //POST
     var posts = [{
             titulo: 'Articulo 1',
@@ -44,29 +47,64 @@ $(document).ready(function() {
         $('#contenedor-articulos').append(articulo);
     });
 
+}
+
+    //Scroll arriba de la web
+    $('#subir').click(function() {
+        /* Act on the event */
+        $('html, body').animate({ scrollTop: 0 }, 500);
+    });
+
+    //Login Falso
+    $('#login form').submit(function(event) {
+        /* Act on the event */
+        localStorage.setItem("form_name", $('#form_name').val());
+        
+    });
+
+    var form_name = localStorage.getItem("form_name");
+
+    if (form_name != null || form_name != undefined) {
+        var texto_ipsum = $('#nombre_usuario');
+        texto_ipsum.html("Bienvenido,&nbsp;<b>" + form_name + "</b>");
+        texto_ipsum.parent().append('<a class="btn btn-verde my-2" id="logout">Logout</a>')
+        $('#login').hide();
+
+        $('#logout').click(function(event) {
+            /* Act on the event */
+            localStorage.clear();
+            location.reload();
+        });
+    }
+
 
 
 });
 
-var tema_actual = "verde";
+localStorage.setItem(tema_actual, 'verde');
+
+//Cambiador de temas
+var tema_actual = localStorage.getItem(tema_actual);
 
 function cambiarTema(color) {
-    if (color == tema_actual) {
-    } else {
-    	var bk_viejo = 'bk-' + tema_actual;
-    	var btn_viejo = 'btn-' + tema_actual;
+    if (color == tema_actual) {} else {
+        var bk_viejo = 'bk-' + tema_actual;
+        var btn_viejo = 'btn-' + tema_actual;
 
-    	var bk_nuevo = 'bk-' + color;
-    	var btn_nuevo = 'btn-' + color;
+        var bk_nuevo = 'bk-' + color;
+        var btn_nuevo = 'btn-' + color;
 
-        $("." + bk_viejo).each(function(index, value){
-        	$(this).removeClass(bk_viejo);
-        	$(this).addClass(bk_nuevo);
+        $("." + bk_viejo).each(function(index, value) {
+            $(this).removeClass(bk_viejo);
+            $(this).addClass(bk_nuevo);
         });
-        $("." + btn_viejo).each(function(index, value){
-        	$(this).removeClass(btn_viejo);
-        	$(this).addClass(btn_nuevo);
+        $("." + btn_viejo).each(function(index, value) {
+            $(this).removeClass(btn_viejo);
+            $(this).addClass(btn_nuevo);
         });
-        tema_actual = color;
+        localStorage.setItem(tema_actual, color);
+        tema_actual = localStorage.getItem(tema_actual);
     }
 }
+
+//Login falso
