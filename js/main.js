@@ -1,34 +1,34 @@
 $(document).ready(function() {
 
-    
-    if(window.location.href.indexOf('index') > -1){
-    //Añadir articulos 
-    //POST
-    var posts = [{
-            titulo: 'Articulo 1',
-            fecha: 'Publicado ' + new Date(),
-            contenido: 'Contenido Articulo 1',
-        },
-        {
-            titulo: 'Articulo 2',
-            fecha: new Date(),
-            contenido: 'Contenido Articulo 2',
-        },
-        {
-            titulo: 'Articulo 3',
-            fecha: new Date(),
-            contenido: 'Contenido Articulo 3',
-        },
-        {
-            titulo: 'Articulo 4',
-            fecha: new Date(),
-            contenido: 'Contenido Articulo 4',
-        },
-    ];
 
-    posts.forEach((item, index) => {
-        var articulo =
-            `<div class="col-sm-12">
+    if (window.location.href.indexOf('index') > -1) {
+        //Añadir articulos 
+        //POST
+        var posts = [{
+                titulo: 'Articulo 1',
+                fecha: 'Publicado ' + new Date(),
+                contenido: 'Contenido Articulo 1',
+            },
+            {
+                titulo: 'Articulo 2',
+                fecha: new Date(),
+                contenido: 'Contenido Articulo 2',
+            },
+            {
+                titulo: 'Articulo 3',
+                fecha: new Date(),
+                contenido: 'Contenido Articulo 3',
+            },
+            {
+                titulo: 'Articulo 4',
+                fecha: new Date(),
+                contenido: 'Contenido Articulo 4',
+            },
+        ];
+
+        posts.forEach((item, index) => {
+            var articulo =
+                `<div class="col-sm-12">
                 <nav class="navbar navbar-light no-padding my-2">
                     <div>
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 jus">
@@ -44,42 +44,20 @@ $(document).ready(function() {
                 <hr />
             </div>`;
 
-        $('#contenedor-articulos').append(articulo);
-    });
-
-}
-
-    //Scroll arriba de la web
-    $('#subir').click(function() {
-        /* Act on the event */
-        $('html, body').animate({ scrollTop: 0 }, 500);
-    });
-
-    //Login Falso
-    $('#login form').submit(function(event) {
-        /* Act on the event */
-        localStorage.setItem("form_name", $('#form_name').val());
-        
-    });
-
-    var form_name = localStorage.getItem("form_name");
-
-    if (form_name != null || form_name != undefined) {
-        var texto_ipsum = $('#nombre_usuario');
-        texto_ipsum.html("Bienvenido,&nbsp;<b>" + form_name + "</b>");
-        texto_ipsum.parent().append('<a class="btn btn-verde my-2" id="logout">Logout</a>')
-        $('#login').hide();
-
-        $('#logout').click(function(event) {
-            /* Act on the event */
-            localStorage.clear();
-            location.reload();
+            $('#contenedor-articulos').append(articulo);
         });
     }
 
+    if (window.location.href.indexOf('reloj') > -1) {
 
-
+        setInterval(function() {
+            var reloj = moment().format('h:mm:ss');
+            $('#reloj').html('<p>' + reloj + '</p>');
+        }, 1000);
+    }
 });
+
+
 
 localStorage.setItem(tema_actual, 'verde');
 

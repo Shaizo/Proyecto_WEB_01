@@ -128,7 +128,16 @@
     box-shadow: 0 0 0 0.2rem rgba(8, 105, 209, .5);
 }
 
-
+/* RELOJ */
+#reloj p{
+    font-size: 50px;
+    padding: 30px;
+    margin: 0 auto;
+    border: 3px dashed #333;
+    color: #333;
+    width: 35%;
+    text-align: center
+}
 
 
 
