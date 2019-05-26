@@ -171,9 +171,6 @@ body {
     height: 30px;
 }
 
-.form-control {
-    width: auto;
-}
 
 img {
     display: block;
@@ -237,4 +234,10 @@ img {
 
 .pointer-active{
     cursor: pointer;
+}
+
+
+/* FORM ERRORS CONTACT.HTML */
+span.help-block.form-error{
+    color: red;
 }

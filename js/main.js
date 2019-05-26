@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+    //Si el html tiene en su nombre la palabra "index" carga el codigo de dentro
     if (window.location.href.indexOf('index') > -1) {
         //Añadir articulos 
         //POST
@@ -48,13 +48,27 @@ $(document).ready(function() {
         });
     }
 
+    //Si el html tiene en su nombre la palabra "reloj" carga el codigo de dentro
     if (window.location.href.indexOf('reloj') > -1) {
 
         setInterval(function() {
-            var reloj = moment().format('h:mm:ss');
+            var reloj = moment().format('HH:mm:ss');
             $('#reloj').html('<p>' + reloj + '</p>');
         }, 1000);
     }
+
+    //Si el html tiene en su nombre la palabra "contact" carga el codigo de dentro
+    if (window.location.href.indexOf('contact') > -1) {
+
+        $('#datetimepicker').datetimepicker({
+            format: 'L'
+        });
+
+        $.validate({
+            lang: 'es'
+        });
+    }
+
 });
 
 

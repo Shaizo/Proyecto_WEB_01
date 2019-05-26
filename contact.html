@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
@@ -43,11 +44,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">INICIO</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="sobre_mi.html">SOBRE MI</a>
-                            </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">RELOJ</a>
+                                <a class="nav-link" href="#">SOBRE MI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="reloj.html">RELOJ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">JUEGO CHAPUZA</a>
@@ -63,8 +64,40 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-8" id="reloj">
-                <!-- RELOJ -->
+            <div class="col-sm-8" id="box">
+                <!-- Cargar acordeon -->
+                <h2>Contacto</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" data-validation="alphanumeric" data-validation-ignore="ñç" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="subname">Apellidos</label>
+                        <input type="text" name="subname" data-validation="alphanumeric" data-validation-ignore=" " class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" data-validation="email" class="form-control" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Sexo</label>
+                        <select class="form-control" name="sex">
+                            <option value="man">Hombre</option>
+                            <option value="woman">Mujer</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Fecha de naciemiento</label>
+                        <input type="text" name="date" data-validation="date" data-validation-format="dd/mm/yyyy" class="form-control datetimepicker-input" id="datetimepicker" data-toggle="datetimepicker" data-target="#datetimepicker" />
+                    </div>
+                    <div class="form-group">
+                        <label for="years">Edad</label>
+                        <input type="number" name="years" data-validation="number" data-validation-allowing="integer" class="form-control" placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
             <div class="col-sm-4">
                 <div class="row p-3">
@@ -124,8 +157,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 
